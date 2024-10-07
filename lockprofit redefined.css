@@ -1,0 +1,803 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* General Body Styles */
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    background: 
+        url('./soccer-stadium-full-people.jpg'); /* Add the URL of your image here */
+    color: var(--text-color);
+    background-image: " ";
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+header{
+    display: block;
+    width: 100%;
+    background: #2ecc71cc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 4px 4px 20px rgb(15 54 55 / 10%);
+}
+
+/* Base styling for the nav */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px;
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.8), rgba(46, 204, 113, 0));
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    display: flex; /* Use flex to align image and text */
+    align-items: center; /* Center vertically */
+}
+
+.logo-image {
+    width: 40px; /* Set the desired width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.logo span{
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+/* Navbar links styling */
+.navbar a {
+    padding: 8px 17px;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Dropdown menu styling */
+.navbar a:hover,
+.navbar .active {
+    background: var(--main-color);
+    color: var(--bg-color);
+    transition: 0.2s all linear;
+    box-shadow: 4px 4px 20px rgb(15 54 55 / 20%);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: #2ecc71cc; /* Green background */
+    padding: 10px;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    transform: translateY(-10px); /* Start slightly above */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Display the dropdown */
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide down */
+}
+
+/* Dropdown links styling */
+.dropdown-menu li a {
+    color: white; /* White text in dropdown */
+    padding: 8px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+/* Dropdown link hover state */
+.dropdown-menu li a:hover {
+    background-color: #2ecc71cc; /* Darker green on hover */
+    color: white;
+}
+
+#menu {
+    display: none;
+}
+#menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;    
+}
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: #008000; /* Darker green on hover */
+}
+
+/* General styles for docs section */
+.docs-section {
+    margin-top: 150px; /* Offset from the fixed header */
+    padding: 30px;
+    text-align: left;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 50px auto;
+    max-width: 900px;
+}
+
+.docs-section h2{
+    color:green;
+}
+
+.docs-section h3,
+.docs-section h4 {
+    color: #ffffff;
+}
+
+.docs-section p,
+.docs-section ul,
+.docs-section ol {
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* General styles for community section */
+.community-section {
+    margin-top: 150px; /* Offset from the fixed header */
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 50px auto;
+    max-width: 900px;
+}
+
+
+/* Social Media Icons */
+.social-media-icons {
+    margin-top: 30px;
+}
+
+.social-media-icons a {
+    margin: 0 15px;
+    font-size: 2rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-media-icons a:hover {
+    color: var(--main-color); /* Change to main theme color on hover */
+}
+
+.para {
+    font-size: 2rem;
+}
+/* General style for contact */
+
+.contact-section {
+    margin-top: 150px; /* Offset from the fixed header */
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 50px auto;
+    max-width: 900px;
+}
+
+.container form{
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container form h1 {
+    color: #fff;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+
+.container form input{
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #fff;
+}
+
+.container form input::placeholder{
+    color: #fff;
+}
+
+.container form #lastName,
+.container form #mobile{
+    margin-left: 20px;
+}
+
+.container form h4{
+    color: #fff;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+}
+
+.container form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+textarea::-webkit-scrollbar{
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background-color: rgba(194,194,194,0.713);
+}
+
+.container form #button{
+    border: none;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+    width: 100px;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.container form #button:hover{
+    opacity: 0.9;
+}
+
+/* Headers */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2ecc71;
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: #27ae60;
+}
+
+/* Table of Contents Styling */
+.toc {
+    margin-bottom: 40px;
+}
+
+.toc li {
+    margin-bottom: 15px;
+}
+
+.toc a {
+    text-decoration: none;
+    color: #2ecc71;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.toc a:hover {
+    color: #27ae60;
+}
+
+/* Article Section Styling */
+article {
+    margin-bottom: 60px;
+}
+
+article h3 {
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+article p, article ul {
+    line-height: 1.7;
+}
+
+/* Unordered Lists */
+ul {
+    list-style: disc;
+    margin-left: 40px;
+}
+
+/* Home Container with Glassmorphism */
+.home {
+    min-height: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255,255,255,0.5),
+        rgba(255,255,255,0.1)
+    );
+    border-radius: 1rem;
+    backdrop-filter: blur(2rem);
+    padding: 2rem;
+}
+.main-box{
+    background: white;
+    width: 80%;
+    min-height: 80vh;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255,255,255,0.5),
+        rgba(255,255,255,0.1)
+    );
+    border-radius: 1rem;
+    backdrop-filter: blur(2rem);
+    z-index: 4;
+}
+.home-img {
+    flex: 1 1 17rem;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.home-img img {
+    display: block; /* Removes any extra space below the image */
+    width: 100%; /* Ensures the image fills its container */
+    height: auto; /* Maintains the image's aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+.home-img:hover img {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+.home-text{
+    flex: 1 1 17rem;
+    font-weight: 400;
+}
+
+.home-text h1{
+    font-size: 1.9rem;
+    text-align: center;
+}
+.home-text p{
+    font-size: 0.938rem;
+    font-weight: 300;
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+
+.centered {
+    text-align: center;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    background: #52b656;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.heading h2{
+    font-size: 1.7rem;
+}
+.heading p{
+    font-size: 0.938rem;
+    font-weight: 300;
+}
+/* Services Section */
+.services {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #008000;
+}
+
+.service-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    width: 30%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service-item i {
+    font-size: 48px;
+    color: #008000;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Footer Section */
+.footer {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    background: url('./soccer-stadium-full-people.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 20px 10px; 
+    color: rgb(255, 255, 255); 
+    margin-top: auto; 
+}
+
+.footer .contain {
+    width: 100%; 
+    max-width: 1200px; 
+}
+
+.footer .row {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    width: 100%; 
+    flex-wrap: wrap; 
+}
+
+.footer .footer-col {
+    flex: 1; 
+    min-width: 200px; 
+    margin: 5px; 
+    text-align: center; 
+}
+
+.footer .footer-col h4 {
+    margin-bottom: 10px; /* Reduced space below the heading */
+    position: relative; /* Position relative for the pseudo-element */
+    text-transform: capitalize; /* Capitalizes the first letter of each word */
+}
+
+.footer .footer-col h4::after {
+    content: ''; 
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    bottom: -5px; 
+    width: 30px; 
+    height: 2px; 
+    background-color: #00ff00; 
+}
+
+.footer .footer-col ul {
+    list-style: none; /* Removes default list styles */
+    padding: 0; /* No padding */
+}
+
+.footer .footer-col ul li {
+    margin-bottom: 5px; /* Reduced space between list items */
+}
+
+.footer .footer-col ul li a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.footer .footer-col ul li a:hover {
+    color: #00ff00; /* Changes link color on hover */
+}
+
+.footer .social-links {
+    margin-top: 10px; /* Reduced space above social links */
+}
+
+.footer .social-links a {
+    margin-right: 10px; /* Reduced space between social icons */
+    color: white; /* White color for icons */
+    font-size: 16px; /* Slightly smaller font size for icons */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.footer .social-links a:hover {
+    color: #00ff00; /* Changes icon color on hover */
+}
+
+.newsletter-form {
+    display: flex; /* Use flexbox for the form layout */
+    margin-top: 5px; /* Reduced space above the form */
+}
+
+.newsletter-form input[type="email"] {
+    padding: 8px; /* Reduced padding inside the input */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    flex: 1; /* Take up available space */
+}
+
+.newsletter-form button {
+    padding: 8px 12px; /* Reduced padding for the button */
+    background-color: #00ff00; /* Button background color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    color: white; /* Text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-left: 5px; /* Reduced space between input and button */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.newsletter-form button:hover {
+    background-color: #008000; /* Darker green on hover */
+}
+
+.footer p {
+    text-align: center; /* Center align copyright text */
+    margin-top: 10px; /* Reduced space above the copyright text */
+}
+
+
+
+/* General Responsive Styling */
+
+@media (max-width: 1200px) {
+    .home {
+        width: 90%; /* Make home section smaller on large tablets/small desktops */
+    }
+
+    .navbar a {
+        font-size: 0.9rem; /* Slightly smaller font in the nav menu */
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        display: none; /* Hide navbar on medium-sized screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #2ecc71;
+        border-radius: 5px;
+        width: 200px;
+        padding: 15px;
+    }
+
+    #menu-icon {
+        display: block; /* Show menu icon */
+    }
+
+    .home {
+        flex-direction: column; /* Stack the image and text vertically */
+    }
+
+    .home-img, .home-text {
+        width: 100%; /* Full width for both image and text */
+    }
+
+    .service-items {
+        flex-direction: column; /* Stack service items */
+    }
+
+    .service-item {
+        width: 100%; /* Make service items full width */
+    }
+    #menu:checked ~ .navbar {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 10px;
+        text-align: center;
+        color: white;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        padding: 10px 0;
+    }
+
+    .home h1 {
+        font-size: 1.5rem; /* Reduce font size for headings */
+    }
+
+    .home p {
+        font-size: 0.875rem; /* Smaller text */
+    }
+
+    .footer .footer-col {
+        width: 100%; /* Make footer columns full width */
+        margin-bottom: 30px; /* Add spacing between footer columns */
+    }
+}
+
+@media (max-width: 576px) {
+    .nav {
+        padding: 10px; /* Reduce navbar padding */
+    }
+
+    .navbar a {
+        font-size: 0.8rem; /* Smaller font in nav menu */
+    }
+
+    .home h1 {
+        font-size: 1.25rem; /* Reduce font size for smaller screens */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Smaller buttons */
+    }
+
+    .service-items {
+        display: flex;
+        flex-direction: column; /* Stack service items on smaller devices */
+        align-items: center;
+    }
+
+    .service-item {
+        width: 90%; /* Slightly smaller service item width */
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        text-align: center; /* Center-align footer for mobile */
+    }
+
+    .footer .social-links a {
+        margin-right: 10px; /* Reduce social icon spacing */
+    }
+}
+@media (max-width:467px) {
+    .box img {
+        width: 100%;
+    }
+    .contact-img img {
+        width: 100%;
+    }
+    .copyright {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #52b656; /* This is the correct green color */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
