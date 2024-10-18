@@ -1,6 +1,6 @@
 :root {
-    --main-color: #4caf50; /* Specify your desired color here */
-    --bg-color: #ffffff; /* You can also define other variables if needed */
+    --main-color: #4caf50;
+    --bg-color: #ffffff; 
 }
 
 /* Importing Google Fonts */
@@ -28,13 +28,25 @@ body {
     background-image: " ";
     background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: backgroundSlide 150s infinite;
+    /* transition: background-image 3s ease-in-out; */
 }
-
+/* Keyframes for sliding animation */
+@keyframes backgroundSlide {
+        0% { background-image: url('/soccer-stadium-full-people.jpg'); }
+        20% { background-image: url('/ryan-OywyPkrDEvg-unsplash.jpg'); }
+        40% { background-image: url('/filip-mroz--WgTWXb4nh4-unsplash.jpg'); }
+        60% { background-image: url('/empty-boxing-ring-with-spotlights-stadium_1222783-23342.jpg'); }
+        80% { background-image: url('/thomas-serer-QUr0R1VZPNw-unsplash.jpg'); } 
+        100% { background-image: url('/soccer-stadium-full-people.jpg'); } 
+}
 
 header{
     display: block;
     width: 100%;
-    background: #4caf50;
+    background: #191a19;
     position: fixed;
     top: 0;
     left: 0;
@@ -50,7 +62,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 20px 35px;
-    background: linear-gradient(135deg, #4caf50, rgba(46, 204, 113, 0));
+    background: linear-gradient(135deg, #191a19, rgba(46, 204, 113, 0));
     width: 100%;
     margin-top: 20px;
 }
@@ -58,10 +70,10 @@ header{
 .logo {
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--bg-color);
+    color: var(--main-color);
     text-transform: uppercase;
     display: flex; 
-    align-items: center; 
+    align-items: center;
 }
 
 .logo-image {
@@ -72,6 +84,7 @@ header{
 
 .logo span{
     color: var(--main-color);
+    font-size: 25px;
 }
 
 .navbar {
@@ -92,10 +105,11 @@ header{
 /* Dropdown menu styling */
 .navbar a:hover,
 .navbar .active {
-    background: var(--main-color);
+    background: #333;
     color: var(--bg-color);
     transition: 0.2s all linear;
     box-shadow: 4px 4px 20px rgb(15 54 55 / 20%);
+    border-radius: 10px;
 }
 
 .dropdown {
@@ -105,13 +119,13 @@ header{
 .dropdown-menu {
     display: none; 
     position: absolute;
-    background-color: #4caf50; 
+    background-color: #191a19; 
     padding: 10px;
     list-style: none;
     top: 100%;
     left: 0;
     z-index: 1;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
@@ -136,7 +150,7 @@ header{
 
 /* Dropdown link hover state */
 .dropdown-menu li a:hover {
-    background-color: var(--main-color); 
+    background-color: #333; 
     color: var(--bg-color);
 }
 
@@ -156,7 +170,7 @@ header{
 }
 
 .navbar .nav-links li a:hover {
-    color: #008000; 
+    color: #5c6a5e; 
 }
 
 /* Marquee */
@@ -445,6 +459,8 @@ ul {
     backdrop-filter: blur(2rem);
     padding: 2rem;
 }
+
+
 .main-box{
     background: white;
     width: 80%;
@@ -645,6 +661,46 @@ ul {
     font-weight: 500;  
     cursor: pointer;  
 }
+/* Service section ends*/
+/* Audio Button */
+.fa.fa-music {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #4caf50;
+    color: #4caf50;
+    z-index: 1000;
+    cursor: pointer;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 2px #444444;
+    text-shadow: 0 0 1px #444444;
+    transition: opacity 0.3s ease; 
+    opacity: 0.8; 
+}
+
+/* Style for play state */
+.fa.fa-music:before {
+    content: '\f028'; 
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900; 
+}
+
+/* Style for pause state */
+.fa.fa-music.pause:before {
+    content: '\f28b'; 
+    font-family: 'Font Awesome 5 Free'; 
+    font-weight: 900; 
+}
+
+/* Add hover effect */
+.fa.fa-music:hover {
+    opacity: 1; 
+}
+
 
 /* Footer Section */
 .footer {
@@ -772,9 +828,33 @@ ul {
     text-align: center;
     margin-top: 10px;
 }
+/* Scrool bar start*/
 
+::-webkit-scrollbar {
+    width: 12px; 
+}
 
+::-webkit-scrollbar-track {
+    background: #191a19; 
+    border-radius: 20px;
+}
 
+::-webkit-scrollbar-thumb {
+    background: #4caf50; 
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3b8a3a;
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin; 
+    scrollbar-color: #4caf50 #191a19; 
+}
+
+/* scrollbar styling ends*/
 /* General Responsive Styling */
 
 @media (max-width: 1200px) {
@@ -794,7 +874,7 @@ ul {
         position: absolute;
         top: 60px;
         right: 20px;
-        background-color: var(--main-color);
+        background-color: #191a19;
         border-radius: 5px;
         width: 200px;
         padding: 15px;
