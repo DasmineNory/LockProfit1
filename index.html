@@ -19,7 +19,7 @@
         <div class="nav container">
             <a href="#" class="logo">
                 <img src="/LP Shield-1.png" alt="Logo Image" class="logo-image">
-                LOCKPROFIT<span>.</span>
+                <span>LOCKPROFIT.</span>
             </a>
             <!-- Menu Icon starts -->
             <input type="checkbox" id="menu">
@@ -148,6 +148,10 @@
     </div>
 </section>
 
+<!-- audio start-->
+<audio id="myAudio" loop src="./AUD-20241012-WA0014.mp3" type="audio/mp3"></audio>
+<i class="fa fa-music fa-music" onclick="playPauseAudio()"></i>
+<!-- audio end-->
 
 <!-- Footer Section -->
 <footer class="footer">
@@ -191,6 +195,21 @@
     </div>
     <p>&copy; 2024 LockProfit. All Rights Reserved.</p>
 </footer>
+
+<script>
+function playPauseAudio() {
+    var audio = document.getElementById("myAudio");
+    var musicIcon = document.querySelector(".fa.fa-music");
+    
+    if (audio.paused) {
+        audio.play();
+        musicIcon.classList.remove("pause"); 
+    } else {
+        audio.pause();
+        musicIcon.classList.add("pause"); 
+    }
+}
+</script>
 
 </body>
 </html>
