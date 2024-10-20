@@ -243,6 +243,28 @@ header{
     line-height: 1.6;
 }
 
+/* Hidden code positioning */
+.hidden-code {
+    position: absolute; 
+    top: 40px;
+    left: calc(100% - 300px); /* Keep this value to align with "stake sizes" */
+    transform: translateX(-50%);
+    opacity: 0; 
+    color: #ffffff; 
+    font-size: 0.8rem; 
+    pointer-events: none; 
+    transition: opacity 0.2s ease;
+}
+
+/* Make the hidden code visible when highlighted */
+::selection .hidden-code {
+    opacity: 1; 
+}
+
+/* Reveal when hovering over the parent <p> element */
+p:hover .hidden-code {
+    opacity: 0.4;
+}
 
 /* General styles for community section */
 .community-section {
@@ -280,6 +302,91 @@ header{
 .para {
     font-size: 2rem;
 }
+/* Presale*/
+/* Whitelist Form Container */
+.whitelist-form-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; /* Center the container */
+}
+
+.whitelist-form-container h2 {
+    font-size: 2rem;
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input[type="submit"] {
+    padding: 12px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .whitelist-form-container {
+        padding: 30px;
+    }
+
+    .whitelist-form-container h2 {
+        font-size: 1.8rem;
+    }
+
+    input[type="text"], input[type="submit"] {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Input Text Styles 
+.whitelist-form-container input[type="text"] {
+    background: rgba(255, 255, 255, 0.3); 
+    color: #ffffff;
+    transition: background 0.3s; 
+} */
+
 /* General style for contact */
 
 .contact-section {
@@ -1068,3 +1175,9 @@ ul {
     transform: translateY(-1px);
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
 }
+
+
+
+
+
+
