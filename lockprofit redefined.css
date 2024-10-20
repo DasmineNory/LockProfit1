@@ -1,7 +1,7 @@
 :root {
     --main-color: #4caf50;
     --bg-color: #ffffff; 
-    --fallback-bg-color: #191a19; /* Set a fallback color that matches your theme */
+    --fallback-bg-color: #191a19; 
 }
 
 /* Importing Google Fonts */
