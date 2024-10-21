@@ -35,7 +35,7 @@ body {
     will-change: background-image;
     transition: background 1s ease-in-out;
     /* transition: background-image 3s ease-in-out; */
-    overflow: auto; /* Allow scrolling */
+    overflow: auto;
 }
 /* Preloading background images */
 body:before {
@@ -333,7 +333,7 @@ p:hover .hidden-code {
     max-width: 400px;
     width: 100%;
     text-align: center;
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto; 
 }
 
 .whitelist-form-container h2 {
@@ -1039,7 +1039,7 @@ ul {
 
     .hidden-code {
         top: 88px;
-        left: calc(100% - 325px);
+        left: calc(100% - 400px);
         transform: translateX(-50%);
     }
 
@@ -1138,6 +1138,11 @@ ul {
     .btn {
         padding: 10px 20px;
     }
+    .hidden-code {
+        top: 65px; 
+        left: 50%; 
+        transform: translateX(-50%); 
+    }
 
     .service-items {
         display: flex;
@@ -1200,13 +1205,6 @@ ul {
     transform: translateY(-1px);
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
 }
-
-
-
-
-
-
-
 
 
 
