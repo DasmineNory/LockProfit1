@@ -78,16 +78,23 @@
         document.addEventListener('DOMContentLoaded', function() {
             const hiddenCode = document.querySelector('.hidden-code');
 
-            hiddenCode.addEventListener('click', function() {
-                
+            // Function to show the hidden code temporarily
+            function showHiddenCode() {
                 hiddenCode.style.opacity = '1'; 
                 hiddenCode.style.pointerEvents = 'auto';
 
-                
+                // Set a timeout to hide it again after 2 seconds
                 setTimeout(function() {
                     hiddenCode.style.opacity = '0'; 
                     hiddenCode.style.pointerEvents = 'none'; 
                 }, 2000); 
+            }
+
+            // Add event listeners for both click and touchstart
+            hiddenCode.addEventListener('click', showHiddenCode);
+            hiddenCode.addEventListener('touchstart', function(event) {
+                event.preventDefault(); // Prevent default touch behavior
+                showHiddenCode();
             });
         });
     </script>
