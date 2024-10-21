@@ -1,7 +1,7 @@
 :root {
     --main-color: #4caf50;
     --bg-color: #ffffff; 
-    --fallback-bg-color: #191a19; /* Set a fallback color that matches your theme */
+    --fallback-bg-color: #191a19;
 }
 
 /* Importing Google Fonts */
@@ -264,10 +264,9 @@ header{
 
 /* Hidden code positioning */
 .hidden-code {
-    position: absolute; 
-    top: 40px;
-    left: calc(100% - 250px); 
-    transform: translateX(-50%);
+    position: absolute;
+    top: 80px;
+    left: calc(100% - 400px);
     opacity: 0; 
     color: #ffffff; 
     font-size: 0.8rem; 
@@ -277,12 +276,12 @@ header{
 
 /* Make the hidden code visible when highlighted */
 ::selection .hidden-code {
-    opacity: 1; 
+    opacity: 0.6; 
 }
 
 /* Reveal when hovering over the parent <p> element */
 p:hover .hidden-code {
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
 /* General styles for community section */
@@ -398,14 +397,6 @@ input[type="submit"]:hover {
         font-size: 0.9rem;
     }
 }
-
-
-/* Input Text Styles 
-.whitelist-form-container input[type="text"] {
-    background: rgba(255, 255, 255, 0.3); 
-    color: #ffffff;
-    transition: background 0.3s; 
-} */
 
 /* General style for contact */
 
@@ -1046,6 +1037,12 @@ ul {
         padding: 10px 0;
     }
 
+    .hidden-code {
+        top: 88px;
+        left: calc(100% - 325px);
+        transform: translateX(-50%);
+    }
+
     .home h1 {
         font-size: 1.5rem;
     }
@@ -1118,6 +1115,11 @@ ul {
         margin-right: 0;
         margin-bottom: 20px;
     }
+}
+.hidden-code {
+    top: 88px;
+    left: calc(100% - 325px);
+    transform: translateX(-50%);
 }
 
 @media (max-width: 576px) {
@@ -1198,6 +1200,15 @@ ul {
     transform: translateY(-1px);
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
 }
+
+
+
+
+
+
+
+
+
 
 
 
