@@ -31,10 +31,27 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     animation: backgroundSlide 150s infinite;
-    position: relative; 
+    position: relative;
+    will-change: background-image;
+    transition: background 1s ease-in-out;
     /* transition: background-image 3s ease-in-out; */
     overflow: auto; /* Allow scrolling */
 }
+/* Preloading background images */
+body:before {
+    content: '';
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    background: url('/soccer-stadium-full-people_Nero_AI_Compress.jpg'),
+                url('/ryan-OywyPkrDEvg-unsplash_Nero_AI_Compress.jpg'),
+                url('/filip-mroz--WgTWXb4nh4-unsplash.jpg'),
+                url('/empty-boxing-ring-with-spotlights-stadium_1222783-23342.jpg'),
+                url('/william-dehoogh-BL9zi3MtORo-unsplash.jpg');
+}
+
 /* Keyframes for sliding animation */
 @keyframes backgroundSlide {
         0% { background-image: url('/soccer-stadium-full-people_Nero_AI_Compress.jpg'); }
@@ -1181,14 +1198,6 @@ ul {
     transform: translateY(-1px);
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
 }
-
-
-
-
-
-
-
-
 
 
 
