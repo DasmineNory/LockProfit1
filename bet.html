@@ -74,5 +74,23 @@
         <p> By utilizing these four distinct bet types, LockProfit ensures a dynamic and inclusive betting experience, catering to different preferences and betting strategies. Whether you trust algorithms, human expertise, community consensus, or a mix of all three, there's a bet type for everyone! </p>
     </section>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hiddenCode = document.querySelector('.hidden-code');
+
+            hiddenCode.addEventListener('click', function() {
+                
+                hiddenCode.style.opacity = '1'; 
+                hiddenCode.style.pointerEvents = 'auto';
+
+                
+                setTimeout(function() {
+                    hiddenCode.style.opacity = '0'; 
+                    hiddenCode.style.pointerEvents = 'none'; 
+                }, 2000); 
+            });
+        });
+    </script>
+
 </body>
 </html>
